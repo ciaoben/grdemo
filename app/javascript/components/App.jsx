@@ -40,6 +40,12 @@ export default (props) => {
       {
         received: (data) => {
           setThinking(false);
+
+          if (data.errored) {
+            toast.error("OPS! Something went wrong. We have messed up 😭");
+            return;
+          }
+
           if (lastReceivedAnswerChunkTimer) {
             clearTimeout(lastReceivedAnswerChunkTimer);
           }

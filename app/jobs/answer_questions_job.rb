@@ -43,5 +43,11 @@ class AnswerQuestionsJob < ApplicationJob
     question.status = :answered
 
     question.save
+  rescue => e
+    # We catch the error and send it as generic to the frontend
+    ActionCable.server.broadcast("session_#{question.session_id}", { errored: true })
+
+    question.status = :errored
+    question.save
   end
 end
