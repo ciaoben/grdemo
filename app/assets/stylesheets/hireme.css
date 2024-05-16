@@ -1,4 +1,6 @@
 .about-container {
+  max-width: 90vw;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
@@ -45,6 +47,15 @@
   border-radius: 2px;
   height: max-content;
   width: 210px;
+
+  @media screen and (min-width: 768px) {
+    position: sticky;
+    top: 4rem;
+  }
+
+  transition-timing-function: ease-out;
+  transition-duration: 0.12s;
+  transition-property: transform;
 }
 
 .hire-me-card:hover {

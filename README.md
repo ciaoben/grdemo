@@ -31,4 +31,5 @@ docker-compose exec web rake book:generate_full_text_file
 - test a new run from github download without container
 
 - proof read the cover letter
-- remove whole book file and test errors in the UI. details matter.
+
+- clean test questions from db

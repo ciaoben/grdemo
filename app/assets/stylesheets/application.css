@@ -50,6 +50,14 @@ body {
   color: var(--gumroad-black);
 }
 
+/* if the window size is big, give some usable limits */
+#root {
+  @media screen and (min-width: 1600px) {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+}
+
 .page-header {
   padding: 2rem 4rem;
   border-bottom: 1px solid var(--gumroad-black);
