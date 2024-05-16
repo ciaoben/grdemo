@@ -14,7 +14,6 @@ RUN apt-get update -qq && \
     apt-get install -y g++-9
 
 
-# RUN npm i -g yarn
 RUN gem install bundler:2.3.26
 
 # Set the working directory
@@ -29,10 +28,9 @@ RUN bundle install
 # Copy the application code
 COPY . .
 
-RUN ls -lah
 
 # Install js deps
-RUN /usr/bin/yarn
+RUN yarn install
 
 # Expose the port
 EXPOSE 3000
