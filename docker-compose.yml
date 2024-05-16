@@ -1,0 +1,21 @@
+version: "3.8"
+services:
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: postgres-nic
+      POSTGRES_PASSWORD: o23unrc2opi2
+      POSTGRES_DB: askymybook
+    ports:
+      - "5432:5432"
+  web:
+    build: .
+    command: bash -c "bin/rails db:migrate && rm -f tmp/pids/server.pid && ./bin/dev"
+    volumes:
+      - .:/askmybook
+    ports:
+      - "3333:3000"
+    environment:
+      OPENAI_API_KEY: PUTYOURKEYHERE
+    depends_on:
+      - db

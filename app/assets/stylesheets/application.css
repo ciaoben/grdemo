@@ -1,0 +1,252 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+:root {
+  --gumroad-black: #242423;
+  --gumroad-grey: #f4f4f0;
+
+  --gumroad-pink: #ff90e8;
+  --gumroad-purple: #90a8ed;
+  --gumroad-green: #23a094;
+  --gumroad-orange: #ffc900;
+  --gumroad-red: #dc341e;
+  --gumroad-yellow: #f1f333;
+}
+
+@font-face {
+  font-family: "Mabry Pro";
+  src: url("fonts/mabry-trial/MabryPro-Regular.eot");
+  src: local("Mabry Pro"), local("MabryPro-Regular"),
+    url("fonts/mabry-trial/MabryPro-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("fonts/mabry-trial/MabryPro-Regular.woff2") format("woff2"),
+    url("fonts/mabry-trial/MabryPro-Regular.woff") format("woff"),
+    url("fonts/mabry-trial/MabryPro-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  font-family: "Mabry Pro", sans-serif;
+}
+
+body {
+  font-size: 16px;
+  background-color: var(--gumroad-grey);
+  color: var(--gumroad-black);
+}
+
+.page-header {
+  padding: 2rem 4rem;
+  border-bottom: 1px solid var(--gumroad-black);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  overflow: hidden;
+  text-align: center;
+
+  h1 {
+    font-size: 40px;
+    margin: 0;
+  }
+}
+
+textarea.question-input {
+  height: 100px;
+  padding: 1rem;
+  font-size: 1.5rem;
+  border: 1px solid var(--gumroad-black);
+  border-radius: 2px;
+  margin-bottom: 1rem;
+}
+
+label {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+button {
+  max-width: max-content;
+  background-color: var(--gumroad-pink);
+  color: var(--gumroad-black);
+  border: 1px solid var(--gumroad-black);
+  padding: 0.75rem 1rem;
+  border-radius: 2px;
+  cursor: pointer;
+
+  transition-timing-function: ease-out;
+  transition-duration: 0.12s;
+  transition-property: transform;
+}
+
+button.ask-btn {
+  align-self: end;
+}
+
+button:hover {
+  transform: translate(-0.25rem, -0.25rem);
+  box-shadow: 0.25rem 0.25rem 0rem var(--gumroad-black);
+}
+
+.history {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-height: 50vh;
+  overflow-y: auto;
+
+  .question {
+    padding: 1rem 1rem;
+    border: 1px solid var(--gumroad-black);
+    border-radius: 2px;
+
+    .question-title {
+      font-weight: bold;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .question-answer {
+      font-size: 0.875rem;
+      line-height: 2;
+      white-space: break-spaces;
+    }
+  }
+}
+
+/* Loading answer animation */
+.thinking {
+  display: flex;
+  font-size: 1.25rem;
+  padding: 2rem 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.thinking-animation-container {
+  position: relative;
+}
+
+.book-cover {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  width: 130px;
+  rotate: 2deg;
+  filter: drop-shadow(0 0 0.15rem rgba(0, 0, 0, 0.1));
+}
+
+.page-roller {
+  display: flex;
+  gap: 1rem;
+  overflow: hidden;
+  max-width: min(400px, 95vw);
+
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(0, 0, 0, 1) 15%,
+    rgba(0, 0, 0, 1) 85%,
+    transparent 100%
+  );
+
+  .page {
+    flex-shrink: 0;
+    border-radius: 3px;
+    background-color: white;
+    filter: drop-shadow(0 0 0.15rem rgba(0, 0, 0, 0.1));
+    border: 1px solid var(--gumroad-black);
+    width: 100px;
+    height: 130px;
+    animation: read 10s linear alternate infinite;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .line {
+      width: 80%;
+      height: 4px;
+      background-color: var(--gumroad-grey);
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@keyframes read {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-3000%);
+  }
+}
+
+/* PAGE LAYOUT */
+.page-content {
+  max-width: 90vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  padding-top: 2rem;
+  padding-bottom: 8rem;
+
+  @media screen and (min-width: 768px) {
+    display: grid;
+    gap: 4rem;
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+.answer {
+  font-size: 1.25rem;
+  line-height: 2;
+  white-space: break-spaces;
+  max-width: 72ch;
+}
+
+.ask-zone {
+  display: flex;
+  flex-direction: column;
+}
+
+.history-zone {
+  display: none;
+  padding-bottom: 3;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
+
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 1) 90%,
+    transparent 100%
+  );
+}

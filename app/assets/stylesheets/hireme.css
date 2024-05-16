@@ -1,0 +1,100 @@
+.about-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+.about-letter {
+  border-radius: 2px;
+  background-color: white;
+  border: 1px solid var(--gumroad-black);
+  padding: 1rem;
+  font-size: 0.875rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  p {
+    line-height: 2;
+    max-width: 72ch;
+  }
+}
+
+/* letter body styling */
+.code-filename {
+  background-color: var(--gumroad-grey);
+  padding: 0 0.5rem;
+}
+
+.p-title {
+  font-size: 1.125rem;
+  font-weight: 900;
+  margin-top: 1.5rem;
+}
+
+/* card */
+.hire-me-card {
+  background-color: white;
+  border: 1px solid var(--gumroad-black);
+  border-radius: 2px;
+  height: max-content;
+  width: 210px;
+}
+
+.hire-me-card:hover {
+  transform: translate(-0.25rem, -0.25rem);
+  box-shadow: 0.25rem 0.25rem 0rem var(--gumroad-black);
+}
+
+.hire-me-card-img {
+  min-height: 200px;
+  background-image: url("face/1.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+.hire-me-card-desc {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-bottom: 1px solid var(--gumroad-black);
+  border-top: 1px solid var(--gumroad-black);
+}
+
+.hire-me-card-price {
+  padding: 1rem;
+}
+
+.price-tag {
+  border-left: none;
+  border: 1px solid var(--gumroad-black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--gumroad-pink);
+  color: var(--gumroad-black);
+  font-size: 0.75rem;
+  padding: 0.5rem;
+  width: max-content;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.875rem;
+}
+
+.icon-star {
+  width: 1rem;
+  height: 1rem;
+  background-size: contain;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTEyLjAyNCAyLjQ0MWMtLjU3MSAwLTEuMTU0LjM1NS0xLjUgMS4wNjJMOC40MDEgNy44NzZsLTQuODQyLjY4N2MtMS41NTYuMjE3LTIuMDYgMS43NDQtLjkzNyAyLjg0MmwzLjQ5OSAzLjQwNS0uODEyIDQuNzhjLS4yNjggMS41NDYgMS4wMTUgMi40ODEgMi40MDUgMS43NDguNTM2LS4yODQgMy4yOTYtMS43MTQgNC4zMS0yLjI0OWw0LjMxIDIuMjVjMS4zOS43MzIgMi42NzgtLjIwMiAyLjQwNS0xLjc1bC0uODQzLTQuNzc5IDMuNDk4LTMuNDA1YzEuMTMtMS4wOTQuNjUxLTIuNjItLjkwNi0yLjg0MmwtNC44NzItLjY4Ny0yLjA5My00LjM3M2MtLjM0NS0uNzA3LS45MjgtMS4wNjEtMS41LTEuMDYyWiIgZmlsbD0iIzAwMCIvPjwvc3ZnPg==);
+}
