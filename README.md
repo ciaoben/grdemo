@@ -24,10 +24,11 @@ docker-compose exec web rake book:generate_full_text_file
 
 4 - done! Visit `localhost:3333` and play with it.
 
-TODO:
+## TODO
 
 - README
 - upload on github in an opaque way
-- proof read the cover letter
 - test a new run from github download without container
+
+- proof read the cover letter
 - remove whole book file and test errors in the UI. details matter.
