@@ -12,3 +12,7 @@ development:
 
 test:
   <<: *default
+
+production:
+  <<: *default
+  database: askymybook
