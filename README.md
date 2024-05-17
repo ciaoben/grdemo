@@ -2,7 +2,7 @@
 
 ## How to run the project locally on Linux/Mac
 
-1 - Open the `docker-compose.yml` file and put your OPENAI API KEY in the environment section.
+1 - Create a `.env` file based on `.env.default` and fill it with the configuration variables needed.
 
 2 - Start the app:
 Both backend and frontend are server from a single docker container, so we only need:
@@ -26,6 +26,8 @@ docker compose exec web rake book:generate_full_text_file
 
 ## Run in prod
 
+1 - Create a `.env.production` file based on `.env.default` and fill it with the configuration variables needed.
+
 ```
 docker compose -f docker-compose-prod.yml up
 ``
@@ -35,12 +37,8 @@ docker compose -f docker-compose-prod.yml up
 - README
 - fix ordering problem in answer response
 
-- run rails in production mode instead
-
 - proof read the cover letter
   - link to projects without referral
 
 - clean test questions from db
-
-
 ```
