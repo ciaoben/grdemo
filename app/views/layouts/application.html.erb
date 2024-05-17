@@ -7,7 +7,10 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application" %>
-    <%= stylesheet_link_tag "hireme" %>
+
+    <% if Rails.env.development? %>
+      <%= stylesheet_link_tag "hireme" %>
+    <% end %>
     <%= javascript_include_tag "application", defer: false %>
 
     <script defer data-domain="gumroad.nicontheinternet.com" src="https://anal.nicontheinternet.com/js/script.js"></script>
