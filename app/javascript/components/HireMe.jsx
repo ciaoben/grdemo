@@ -12,6 +12,9 @@ export default (props) => {
 
           <div>5.0</div>
         </div>
+        <a href="https://nicontheinternet.com" target="_blank">
+          nicontheinternet.com
+        </a>
       </div>
       <div className="hire-me-card-price">
         <div className="price-tag">Let's work together</div>
