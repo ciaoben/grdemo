@@ -1,21 +1,19 @@
 version: "3.8"
 services:
   db:
+    env_file:
+      - .env
     image: postgres:13
-    environment:
-      POSTGRES_USER: postgres-nic
-      POSTGRES_PASSWORD: o23unrc2opi2
-      POSTGRES_DB: askymybook
     ports:
       - "5432:5432"
   web:
+    env_file:
+      - .env
     build: .
     command: ./bin/dev
     volumes:
       - .:/askmybook
     ports:
       - "3333:3000"
-    environment:
-      OPENAI_API_KEY: SECRETHERE
     depends_on:
       - db

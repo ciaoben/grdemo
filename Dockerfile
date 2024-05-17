@@ -13,6 +13,8 @@ RUN apt-get update -qq && \
     apt-get update -qq && \
     apt-get install -y g++-9
 
+# to edit the credentials Rails file
+RUN apt install -y vim 
 
 RUN gem install bundler:2.3.26
 
@@ -27,7 +29,6 @@ RUN bundle install
 
 # Copy the application code
 COPY . .
-
 
 # Install js deps
 RUN yarn install

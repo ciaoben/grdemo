@@ -2,17 +2,19 @@ default: &default
   adapter: postgresql
   encoding: unicode
   host: db
-  username: postgres-nic
-  password: o23unrc2opi2
+  username: <%= ENV["POSTGRES_USER"] %>
+  password: <%= ENV["POSTGRES_PASSWORD"] %>
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
   <<: *default
-  database: askymybook
+  database: <%= ENV["POSTGRES_DB"] %>
 
 test:
   <<: *default
 
 production:
   <<: *default
-  database: askymybook
+  database: <%= ENV["POSTGRES_DB"] %>
+  username: <%= ENV["POSTGRES_USER"] %>
+  password: <%= ENV["POSTGRES_PASSWORD"] %>
