@@ -131,8 +131,7 @@ export default (props) => {
       <div className="page-content">
         <div className="ask-zone">
           <label>
-            Ask me anything about The He Minimalist Entrepreneur by Sahil
-            Lavingia
+            Ask me anything about The Minimalist Entrepreneur by Sahil Lavingia
           </label>
           <textarea
             className="question-input"
