@@ -53,7 +53,7 @@ class Ai
                 --- END CONTENT
             
                 IMPORTANT: if you don't find it in the book, clearly tell me that you could find something about the topic in the book.
-                IMPORTANT 2: If it is not a question or a request about the book, suggest that you only can answer to requests about the book itself.
+                IMPORTANT 2: If it is not a question or a request about the book or its author, suggest that you only can answer to requests about the book itself.
             
                 Here some examples of interactions with Sahil:
                 How to choose what business to start?

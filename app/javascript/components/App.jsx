@@ -130,7 +130,10 @@ export default (props) => {
 
       <div className="page-content">
         <div className="ask-zone">
-          <label>What's your question?</label>
+          <label>
+            Ask me anything about The He Minimalist Entrepreneur by Sahil
+            Lavingia
+          </label>
           <textarea
             className="question-input"
             disabled={asking || thinking}
