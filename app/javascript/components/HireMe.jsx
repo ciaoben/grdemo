@@ -14,7 +14,7 @@ export default (props) => {
         </div>
       </div>
       <div className="hire-me-card-price">
-        <div className="price-tag">WORK TOGHETER</div>
+        <div className="price-tag">Let's work together</div>
       </div>
     </article>
   );
