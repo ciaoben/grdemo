@@ -34,7 +34,9 @@ export default (props) => {
 
   // Open a websocket connection
   const initChannelConnection = () => {
-    const cable = ActionCable.createConsumer("ws://localhost:3333/cable");
+    const cable = ActionCable.createConsumer(
+      `ws://${window.location.host}/cable`
+    );
     cable.subscriptions.create(
       { channel: "AnswerChannel", session_id: sessionId },
       {
