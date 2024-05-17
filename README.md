@@ -32,11 +32,4 @@ docker compose exec web rake book:generate_full_text_file
 docker compose -f docker-compose-prod.yml up
 ``
 
-## TODO
-
-- README
-- proof read the cover letter
-  - link to projects without referral
-
-- clean test questions from db
 ```
