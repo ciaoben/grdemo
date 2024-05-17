@@ -44,6 +44,8 @@ class AnswerQuestionsJob < ApplicationJob
 
     question.save
   rescue => e
+    puts "Error in AnswerQuestionsJob: #{e}"
+
     # We catch the error and send it as generic to the frontend
     ActionCable.server.broadcast("session_#{question.session_id}", { errored: true })
 
