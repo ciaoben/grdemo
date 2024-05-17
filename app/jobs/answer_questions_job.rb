@@ -35,8 +35,8 @@ class AnswerQuestionsJob < ApplicationJob
     query = Ai.compose_whole_book_prompt question.question
 
 
-    answer = Ai.ask query, lambda { |chunk| 
-      ActionCable.server.broadcast("session_#{question.session_id}", { body: chunk })
+    answer = Ai.ask query, lambda { |chunk, chunk_order| 
+      ActionCable.server.broadcast("session_#{question.session_id}", { body: chunk, order: chunk_order })
     }
 
     question.answer = answer

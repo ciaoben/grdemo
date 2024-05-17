@@ -35,8 +35,6 @@ docker compose -f docker-compose-prod.yml up
 ## TODO
 
 - README
-- fix ordering problem in answer response
-
 - proof read the cover letter
   - link to projects without referral
 

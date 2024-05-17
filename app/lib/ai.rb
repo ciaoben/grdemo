@@ -18,6 +18,7 @@ class Ai
         client = OpenAI::Client.new
 
         answer = ''
+        part_counter = 0
         response = client.chat(
             parameters: {
                 model: "gpt-4o", 
@@ -25,11 +26,11 @@ class Ai
                 temperature: 0,
                 stream: proc do |chunk, _bytesize|
                     part = chunk.dig("choices", 0, "delta", "content")
+                    part_counter += 1
 
                     if part
-                        p part
                         answer += part 
-                        lmbda.call(part) if lmbda
+                        lmbda.call(part, part_counter) if lmbda
                     end
                 end
             }

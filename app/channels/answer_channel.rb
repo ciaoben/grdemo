@@ -4,7 +4,7 @@ class AnswerChannel < ApplicationCable::Channel
     def subscribed
         session_id = params['session_id']
 
-        Rails.logger.info "subscribed to session: #{session_id}"
+        Rails.logger.info "WebSocket subscribed to session: #{session_id}"
 
         # give an identity to the new channel to be used later from
         # AI chat to stream the answer

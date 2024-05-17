@@ -16,8 +16,10 @@ const generateSessionId = () => {
   return sessionId;
 };
 
-// we don't need to scomodate react state for this info
+// we don't need to bother react state for this info. So we can keep
+// performance high.
 let lastReceivedAnswerChunkTimer = null;
+let answerChunks = [];
 
 export default (props) => {
   const [question, setQuestion] = useState("");
@@ -56,7 +58,16 @@ export default (props) => {
           }
 
           if (data.body) {
-            setAnswer((prevAnswer) => prevAnswer + data.body);
+            // we need to sort them using the field "order"
+            // that the server send us to be sure the answer
+            // makes sense
+            answerChunks.push(data);
+            answerChunks.sort((a, b) => a.order - b.order);
+
+            setAnswer((prevAnswer) => {
+              const chunks = answerChunks.map((chunk) => chunk.body).join("");
+              return chunks;
+            });
 
             lastReceivedAnswerChunkTimer = setTimeout(() => {
               // refresh last 10 questions with the one we just answered
@@ -78,6 +89,9 @@ export default (props) => {
 
   const ask = async () => {
     const api = new API(sessionId);
+
+    // flush the buffer for the next question
+    answerChunks = [];
 
     setAsking(true);
     setAnswer("");
@@ -121,9 +135,11 @@ export default (props) => {
             className="question-input"
             disabled={asking || thinking}
             onChange={(e) => setQuestion(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === "Enter") ask();
+            }}
             value={question}
           ></textarea>
-
           <button
             className="ask-btn"
             disabled={asking || thinking}
