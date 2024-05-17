@@ -53,6 +53,20 @@ export default (props) => {
         <br />
         The highlights of my developer experience are:
         <div className="p-title">9 years (and counting...) at Qboxmail.com</div>
+        <div>
+          <a
+            href="https://www.qboxmail.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Visit Qboxmail.com
+          </a>
+          <span class="p-asterisk">
+            * this is the commercial site with the overview of the products, if
+            you want to take a look at the two web apps I can create you burner
+            accounts.
+          </span>
+        </div>
         I have worked as a remote full-stack developer for Qboxmail.com for the
         last 9 years. Last year, I transitioned to a part-time position to find
         new opportunities.
@@ -64,6 +78,15 @@ export default (props) => {
         <br />- The webmail (with contacts & calendar): Node.js backend and
         React.js frontend single-page application.
         <div className="p-title">Side projects - Blooza</div>
+        <div>
+          <a
+            href="https://blooza.app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Visit Blooza's landing page
+          </a>
+        </div>
         Blooza is a mobile app for Italian football lovers. They can trade the
         cards of their favorite teams and play against each other using the
         real-time data from Serie A matches.
@@ -71,6 +94,15 @@ export default (props) => {
         the Android versions. The app is built entirely in Vue.js on top of
         Cordova. The backend is a Node.js app.
         <div className="p-title">Side projects - FontsVibes.com</div>
+        <div>
+          <a
+            href="https://fontsvibes.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Play around with FontsVibes
+          </a>
+        </div>
         My latest side project is a simple tool to quickly find the perfect font
         for web products. It is a SvelteKit app.
       </p>
