@@ -61,7 +61,7 @@ export default (props) => {
           >
             Visit Qboxmail.com
           </a>
-          <span class="p-asterisk">
+          <span className="p-asterisk">
             * this is the commercial site with the overview of the products, if
             you want to take a look at the two web apps I can create you burner
             accounts.
