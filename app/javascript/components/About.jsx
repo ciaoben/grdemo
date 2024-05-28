@@ -4,7 +4,6 @@ export default (props) => {
   return (
     <div className="about-letter" id="about">
       <h1>About this project & me</h1>
-
       <p>
         Hi Gumroad! <br />I am Nicolò from Italy 🇮🇹, a software developer who
         spends his time building things on the web. <br />
@@ -42,9 +41,7 @@ export default (props) => {
         For your information: It took me 7.5 hours to build this project. Then I
         wrestled another 2 hours with docker to deploy it to my server 😇.
       </p>
-
-      <h2>More info about me</h2>
-
+      <h2>My "CV"</h2>
       <p>
         I am 32 years old, I was born in Cremona (northern Italy), and I am a
         software developer.
@@ -77,22 +74,6 @@ export default (props) => {
         application.
         <br />- The webmail (with contacts & calendar): Node.js backend and
         React.js frontend single-page application.
-        <div className="p-title">Side projects - Blooza</div>
-        <div>
-          <a
-            href="https://blooza.app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Visit Blooza's landing page
-          </a>
-        </div>
-        Blooza is a mobile app for Italian football lovers. They can trade the
-        cards of their favorite teams and play against each other using the
-        real-time data from Serie A matches.
-        <br />I am the only developer and I have built the backend, the iOS, and
-        the Android versions. The app is built entirely in Vue.js on top of
-        Cordova. The backend is a Node.js app.
         <div className="p-title">Side projects - FontsVibes.com</div>
         <div>
           <a
@@ -106,9 +87,19 @@ export default (props) => {
         My latest side project is a simple tool to quickly find the perfect font
         for web products. It is a SvelteKit app.
       </p>
-
+      <div className="p-title">Side projects - Blooza</div>
+      <div>
+        <a href="https://blooza.app" target="_blank" rel="noopener noreferrer">
+          Visit Blooza's landing page
+        </a>
+      </div>
+      Blooza is a mobile app for Italian football lovers. They can trade the
+      cards of their favorite teams and play against each other using the
+      real-time data from Serie A matches.
+      <br />I am the only developer and I have built the backend, the iOS, and
+      the Android versions. The app is built entirely in Vue.js on top of
+      Cordova. The backend is a Node.js app.
       <h2>Why I am a good fit for the role</h2>
-
       <p>
         I am a developer, but I became one because I love building things, and
         coding proved to be the most powerful and accessible tool to do so.
