@@ -65,8 +65,8 @@ export default (props) => {
           </a>
           <span className="p-asterisk">
             * this is the commercial site with the overview of the products, if
-            you want to take a look at the two web apps I can create you burner
-            accounts.
+            you want to take a look at the two web apps I created you burner
+            accounts. You find the credetials and links down here.
           </span>
         </div>
         I have worked as a remote full-stack developer for Qboxmail.com for the
@@ -77,8 +77,25 @@ export default (props) => {
         a small team of 2 software developers and 1 designer: <br /> <br />- The
         provisioning panel: Rails backend and React.js frontend single-page
         application.
+        <a
+          href="https://panel.qboxmail.com"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Link
+        </a>
+        Credentials: testbenigni@qboxmail.it - YsjHWZMv6cuY
         <br />- The webmail (with contacts & calendar): Node.js backend and
         React.js frontend single-page application.
+        <a
+          href="https://webmail.qboxmail.com"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Link
+        </a>
+        Credentials: 01@qbmove.test - 8zkYy3rkASJ5
+        <br />
         <div className="p-title">Side projects - FontsVibes.com</div>
         <div>
           <a
