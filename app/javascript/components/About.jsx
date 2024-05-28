@@ -78,7 +78,7 @@ export default (props) => {
         new opportunities.
         <br />
         In my 9 years at Qboxmail, I have built and maintained 2 big web apps in
-        a small team of 2 software developers and 1 designer: <br /> <br />- The
+        a small team of 3 software developers and 1 designer: <br /> <br />- The
         provisioning panel: Rails backend and React.js frontend single-page
         application.
         <br />
@@ -158,7 +158,7 @@ export default (props) => {
         re-written applications that have updated dependencies while adding new
         features every week.
         <br />
-        <br />I have strong remote experience. I have worked remotely for 9
+        <br />I have strong remote experience. I have worked remotely for 7
         years now, and I know the pros and cons of it. I know the importance of
         good writing, and I am always trying to improve my skills.
         <br />
