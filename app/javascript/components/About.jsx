@@ -93,19 +93,23 @@ export default (props) => {
         <br />
         Right now is a "beta". I am slowly improving it in my free time and
         listening to feedback.
+        <div className="p-title">Side projects - Blooza</div>
+        <div>
+          <a
+            href="https://blooza.app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Visit Blooza's landing page
+          </a>
+        </div>
+        Blooza is a mobile app for Italian football lovers. They can trade the
+        cards of their favorite teams and play against each other using the
+        real-time data from Serie A matches.
+        <br />I am the only developer and I have built the backend, the iOS, and
+        the Android versions. The app is built entirely in Vue.js on top of
+        Cordova. The backend is a Node.js app.
       </p>
-      <div className="p-title">Side projects - Blooza</div>
-      <div>
-        <a href="https://blooza.app" target="_blank" rel="noopener noreferrer">
-          Visit Blooza's landing page
-        </a>
-      </div>
-      Blooza is a mobile app for Italian football lovers. They can trade the
-      cards of their favorite teams and play against each other using the
-      real-time data from Serie A matches.
-      <br />I am the only developer and I have built the backend, the iOS, and
-      the Android versions. The app is built entirely in Vue.js on top of
-      Cordova. The backend is a Node.js app.
       <h2>Why I am a good fit for the role</h2>
       <p>
         I am a developer, but I became one because I love building things, and
