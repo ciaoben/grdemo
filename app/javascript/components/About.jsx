@@ -39,7 +39,7 @@ export default (props) => {
         <br />
         <br />
         For your information: It took me 7.5 hours to build this project. Then I
-        wrestled another 2 hours with docker to deploy it to my server 😇.
+        wrestled another 2 hours with Docker to deploy it to my server 😇.
       </p>
       <h2>My "CV"</h2>
       <p>
@@ -48,7 +48,8 @@ export default (props) => {
         <br />
         I love building things for the web.
         <br />
-        The highlights of my developer experience are:
+        The highlights of my developer experience that could be interesting to
+        you are:
         <div className="p-title">9 years (and counting...) at Qboxmail.com</div>
         <div>
           <a
@@ -105,22 +106,25 @@ export default (props) => {
         coding proved to be the most powerful and accessible tool to do so.
         <br />
         For this reason, even though I am a technical figure, I never lose sight
-        of what matters: shipping to the customer. I try to avoid tech-only
-        problems stopping me from doing this. I like to ship extra pleasing
-        details. I love when products surprise me in an unexpected way.
+        of what matters: shipping to the customer. <br />I try to avoid
+        tech-only problems stopping me from doing this. <br />I like to ship
+        extra pleasing details. I love when products surprise me in an
+        unexpected way.
+        <br />
         <br />
         I know what it means to build from a blank page and to maintain large
         projects for years, adding new features while removing technical debt.
         Both of the main products I work on at Qboxmail are multi-year, never
         re-written applications that have updated dependencies while adding new
         features every week.
+        <br />
         <br />I have strong remote experience. I have worked remotely for 9
         years now, and I know the pros and cons of it. I know the importance of
         good writing, and I am always trying to improve my skills.
         <br />
+        <br />
         Regarding your tech stack, I am confident I can be effective from day
-        one since I know well how to work with Rails & React (or anything that
-        runs in the browser).
+        one since I know well how to work with Rails & React.
         <br />I know JavaScript and CSS deeply since I care a lot about UX/UI,
         and it is necessary to know how the browser works with these
         technologies to achive good user experiences.
