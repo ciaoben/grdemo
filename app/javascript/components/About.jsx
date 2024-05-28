@@ -77,6 +77,7 @@ export default (props) => {
         a small team of 2 software developers and 1 designer: <br /> <br />- The
         provisioning panel: Rails backend and React.js frontend single-page
         application.
+        <br />
         <a
           href="https://panel.qboxmail.com"
           rel="noopener noreferrer"
@@ -84,9 +85,11 @@ export default (props) => {
         >
           Link
         </a>
+        <br />
         Credentials: testbenigni@qboxmail.it - YsjHWZMv6cuY
         <br />- The webmail (with contacts & calendar): Node.js backend and
         React.js frontend single-page application.
+        <br />
         <a
           href="https://webmail.qboxmail.com"
           rel="noopener noreferrer"
@@ -94,6 +97,7 @@ export default (props) => {
         >
           Link
         </a>
+        <br />
         Credentials: 01@qbmove.test - 8zkYy3rkASJ5
         <br />
         <div className="p-title">Side projects - FontsVibes.com</div>
