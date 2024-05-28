@@ -86,7 +86,13 @@ export default (props) => {
           </a>
         </div>
         My latest side project is a simple tool to quickly find the perfect font
-        for web products. It is a SvelteKit app.
+        for web products. <br /> It is a SvelteKit app with a Node.js backend.
+        It started as a "soloware" project, something for myself, but since I
+        use it a lot, I decided to polish it and make it a free tool for
+        everyone.
+        <br />
+        Right now is a "beta". I am slowly improving it in my free time and
+        listening to feedback.
       </p>
       <div className="p-title">Side projects - Blooza</div>
       <div>
