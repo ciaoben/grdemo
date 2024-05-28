@@ -31,5 +31,14 @@ docker compose exec web rake book:generate_full_text_file
 ```
 docker compose -f docker-compose-prod.yml up
 ``
+```
 
+## Deploy new version
+
+```
+git pull;
+docker compose -f docker-compose-prod.yml stop;
+docker compose -f docker-compose-prod.yml rm -f;
+docker compose -f docker-compose-prod.yml up -d;
+docker compose -f docker-compose-prod.yml logs -f
 ```
