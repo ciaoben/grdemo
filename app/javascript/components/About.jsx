@@ -39,7 +39,11 @@ export default (props) => {
         <br />
         <br />
         For your information: It took me 7.5 hours to build this project. Then I
-        wrestled another 2 hours with Docker to deploy it to my server 😇.
+        wrestled another 2 hours with Docker to deploy it to my server 😇. You
+        can find the code here:
+        <a href="https://github.com/ciaoben/grdemo">
+          https://github.com/ciaoben/grdemo
+        </a>
       </p>
       <h2>My "CV"</h2>
       <p>
