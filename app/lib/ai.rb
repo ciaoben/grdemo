@@ -23,7 +23,7 @@ class Ai
             parameters: {
                 model: "gpt-4o", 
                 messages: [{ role: "user", content: query}],
-                temperature: 0,
+                temperature: 0.4,
                 stream: proc do |chunk, _bytesize|
                     part = chunk.dig("choices", 0, "delta", "content")
                     part_counter += 1

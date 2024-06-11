@@ -4,6 +4,7 @@ import ActionCable from "actioncable";
 import About from "./About";
 import HireMe from "./HireMe";
 import API from "../api";
+import Menu from "./Menu";
 
 // We use this to isolate each session and persist data when refreshing the browser
 // but for the single user.
@@ -114,18 +115,7 @@ export default (props) => {
       <div className="page-header">
         <h1>Ask Sahil's Book</h1>
 
-        <nav>
-          <a
-            href="#about"
-            onClick={(e) => {
-              e.preventDefault();
-              const aboutSection = document.querySelector("#about");
-              aboutSection.scrollIntoView({ behavior: "smooth" });
-            }}
-          >
-            About this project
-          </a>
-        </nav>
+        <Menu></Menu>
       </div>
 
       <div className="page-content">

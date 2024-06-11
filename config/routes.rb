@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   get "/", to: "application#index"
   get "/session", to: "application#current_session"
+  get "/product", to: "application#product_demo_page"
 
   resources :questions, only: [:create]
 

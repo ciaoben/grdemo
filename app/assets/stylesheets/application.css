@@ -17,6 +17,7 @@
 :root {
   --gumroad-black: #242423;
   --gumroad-grey: #f4f4f0;
+  --gumroad-grey-dark: #e5e5e5;
 
   --gumroad-pink: #ff90e8;
   --gumroad-purple: #90a8ed;
@@ -40,12 +41,9 @@
   font-display: swap;
 }
 
-* {
-  font-family: "Mabry Pro", sans-serif;
-}
-
 body {
   font-size: 16px;
+  font-family: "Mabry Pro", sans-serif;
   background-color: var(--gumroad-grey);
   color: var(--gumroad-black);
 }
@@ -104,6 +102,12 @@ button {
   transition-timing-function: ease-out;
   transition-duration: 0.12s;
   transition-property: transform;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+  pointer-events: none;
 }
 
 button.ask-btn {
@@ -257,4 +261,297 @@ button:hover {
     rgba(0, 0, 0, 1) 90%,
     transparent 100%
   );
+}
+
+/* Font Tester */
+
+.product-container {
+  display: flex;
+  padding: 0.5rem 0.5rem;
+
+  @media screen and (min-width: 768px) {
+    padding: 2rem 2rem;
+  }
+}
+
+.product-card {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  border-radius: 4px;
+  border: 1px solid var(--gumroad-black);
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    object-fit: contain;
+  }
+}
+
+.product-card-title {
+  padding: 1.5rem;
+  font-size: 24px;
+  border-bottom: 1px solid var(--gumroad-black);
+
+  @media screen and (min-width: 768px) {
+    padding: 1.5rem 1.5rem;
+    font-size: 40px;
+  }
+}
+
+.product-card-meta {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid var(--gumroad-black);
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+  }
+}
+
+.product-card-author {
+  padding: 0.5rem 1.5rem;
+
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  @media screen and (min-width: 768px) {
+    border-right: 1px solid var(--gumroad-black);
+    padding: 1rem 1.5rem;
+  }
+}
+
+.product-card-author-avatar {
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: var(--gumroad-pink);
+  border: 1px solid var(--gumroad-black);
+}
+
+.product-card-rating {
+  padding: 1rem 1.5rem;
+
+  display: flex;
+  align-items: center;
+
+  gap: 0.75rem;
+
+  .icon-star {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+}
+
+.product-card-body {
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+.product-card-price-desktop {
+  display: none;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  padding: 1.5rem;
+  border-left: 1px solid var(--gumroad-black);
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+}
+
+.product-card-price-mobile {
+  display: flex;
+  flex-direction: column;
+
+  padding: 0.5rem 1.5rem;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.product-card-price-option {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--gumroad-black);
+  border-radius: 4px;
+
+  background-color: var(--gumroad-grey-dark);
+
+  transform: translate(-0.25rem, -0.25rem);
+  box-shadow: 0.25rem 0.25rem 0rem var(--gumroad-black);
+}
+
+.product-card-price-option-amount {
+  border-radius: 30px;
+  background-color: white;
+  border: 1px solid var(--gumroad-black);
+  padding: 0.65rem 1rem;
+  font-size: 0.875rem;
+}
+
+.product-card-price-option-description-title {
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.product-card-price-option-description-subtitle {
+  font-size: 0.875rem;
+}
+
+.product-card-description {
+  line-height: 1.5;
+  padding: 1.5rem;
+}
+
+/* font tester widget */
+.ft-controls {
+  border-radius: 4px;
+  border: 1px solid var(--gumroad-black);
+  overflow: hidden;
+  background-color: white;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+
+  @media screen and (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.ft-controls label {
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+  display: block;
+  font-weight: bold;
+}
+
+.ft-control-variant {
+  border-right: 1px solid var(--gumroad-black);
+  padding-right: 1rem;
+  padding: 1rem;
+}
+
+.ft-control-theme-and-size {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem;
+
+  @media screen and (min-width: 768px) {
+    gap: 0.5rem;
+  }
+}
+
+.ft-theme-toggle {
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: transform 0.12s ease-out;
+  border: 1px solid var(--gumroad-black);
+}
+
+.ft-size-picker {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.ft-size-toggle {
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: transform 0.12s ease-out;
+  border: 1px solid var(--gumroad-black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ft-font-toggle {
+  transition: transform 0.12s ease-out;
+  border: 1px solid var(--gumroad-black);
+  background-color: white;
+  font-size: 0.875rem;
+  padding: 0.5rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.ft-theme-toggle:hover,
+.ft-size-toggle:hover {
+  transform: translate(-0.15rem, -0.15rem);
+  box-shadow: 0.15rem 0.15rem 0rem var(--gumroad-black);
+}
+
+.ft-widget-container {
+  padding: 1rem;
+  border-top: 1px solid var(--gumroad-black);
+
+  h1 {
+    font-size: 1.25rem;
+  }
+}
+
+.ft-widget {
+  background: white;
+  border: 1px solid var(--gumroad-black);
+  border-radius: 4px;
+  /* transform: translate(-0.25rem, -0.25rem); */
+  /* box-shadow: 0.25rem 0.25rem 0rem var(--gumroad-black); */
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  text-align: center;
+}
+
+.ft-font-picker {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.ft-theme-picker {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* menu */
+.menu {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.875rem;
+
+  a {
+    text-decoration: none;
+    color: var(--gumroad-black);
+    padding: 0.5rem;
+    background-color: white;
+    border: 1px solid var(--gumroad-black);
+    border-radius: 50px;
+    transition: transform 0.12s ease-out;
+  }
+
+  a:hover,
+  a.active {
+    transform: translate(-0.15rem, -0.15rem);
+    box-shadow: 0.15rem 0.15rem 0rem var(--gumroad-black);
+  }
 }
