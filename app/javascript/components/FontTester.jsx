@@ -91,7 +91,9 @@ export default (props) => {
               <div
                 key={font.name}
                 onClick={() => setActiveFont(font.name)}
-                className="ft-font-toggle"
+                className={`ft-font-toggle ${
+                  activeFont === font.name ? "active" : ""
+                }`}
               >
                 {font.name}
               </div>
@@ -105,7 +107,9 @@ export default (props) => {
             <div className="ft-theme-picker">
               {THEMES.map((theme) => (
                 <div
-                  className="ft-theme-toggle"
+                  className={`ft-theme-toggle ${
+                    activeTheme.preview === theme.preview ? "active" : ""
+                  }`}
                   key={theme.preview}
                   onClick={() => setActiveTheme(theme)}
                   style={{ backgroundColor: theme.preview }}

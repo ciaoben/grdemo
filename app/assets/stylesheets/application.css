@@ -493,7 +493,9 @@ button:hover {
 }
 
 .ft-theme-toggle:hover,
-.ft-size-toggle:hover {
+.ft-size-toggle:hover,
+.ft-font-toggle.active,
+.ft-theme-toggle.active {
   transform: translate(-0.15rem, -0.15rem);
   box-shadow: 0.15rem 0.15rem 0rem var(--gumroad-black);
 }
